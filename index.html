@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Long Until I Get Hacked</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⏰ How Long Until I Get Hacked</h1>
+            <p class="subtitle">Check your IP address and VPN security status</p>
+        </header>
+
+        <div class="card">
+            <button id="checkBtn" class="check-button">Check My IP & VPN Status</button>
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Checking your IP and VPN status...</p>
+            </div>
+        </div>
+
+        <div id="results" class="results hidden">
+            <div class="info-section">
+                <h2>📍 IP Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="label">IP Address:</span>
+                        <span class="value" id="ipAddress">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Location:</span>
+                        <span class="value" id="location">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">ISP:</span>
+                        <span class="value" id="isp">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Organization:</span>
+                        <span class="value" id="org">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vpn-section">
+                <h2>🛡️ VPN Status</h2>
+                <div id="vpnStatus" class="status-badge">-</div>
+            </div>
+
+            <div id="compromiseSection" class="compromise-section hidden">
+                <h2>⚠️ Security Risk Assessment</h2>
+                <div class="risk-card">
+                    <div class="risk-header">
+                        <span class="risk-label">Days Until Compromised:</span>
+                        <span class="risk-days" id="riskDays">-</span>
+                    </div>
+                    <div class="risk-details">
+                        <div class="risk-item">
+                            <span class="risk-name">Risk Level:</span>
+                            <span class="risk-value" id="riskLevel">-</span>
+                        </div>
+                        <div class="risk-item">
+                            <span class="risk-name">Risk Score:</span>
+                            <span class="risk-value" id="riskScore">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="safeSection" class="safe-section hidden">
+                <div class="safe-card">
+                    <h3>✅ No VPN Detected</h3>
+                    <p>Your connection appears to be from a standard residential IP address. No immediate VPN-related security risks detected.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

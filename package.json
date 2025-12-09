@@ -1,0 +1,15 @@
+{
+  "name": "how-long-until-i-get-hacked",
+  "version": "1.0.0",
+  "description": "Check your IP and VPN security status",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.0",
+    "cors": "^2.8.5"
+  }
+}
+

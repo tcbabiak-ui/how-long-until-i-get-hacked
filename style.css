@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.subtitle {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.check-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-weight: 600;
+}
+
+.check-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.check-button:active {
+    transform: translateY(0);
+}
+
+.loading {
+    margin-top: 20px;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.results {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.info-section, .vpn-section, .compromise-section, .safe-section {
+    margin-bottom: 30px;
+}
+
+.info-section:last-child, .vpn-section:last-child, .compromise-section:last-child, .safe-section:last-child {
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.label {
+    font-weight: 600;
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.value {
+    color: #333;
+    font-size: 1.1em;
+    word-break: break-all;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.status-badge.vpn-detected {
+    background: #fee;
+    color: #c33;
+    border: 2px solid #c33;
+}
+
+.status-badge.no-vpn {
+    background: #efe;
+    color: #3c3;
+    border: 2px solid #3c3;
+}
+
+.risk-card {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(238, 90, 111, 0.3);
+}
+
+.risk-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.risk-label {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.risk-days {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.risk-details {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.risk-item {
+    display: flex;
+    gap: 10px;
+}
+
+.risk-name {
+    font-weight: 600;
+}
+
+.risk-value {
+    font-weight: bold;
+}
+
+.risk-value.high {
+    color: #ffeb3b;
+}
+
+.risk-value.medium {
+    color: #ff9800;
+}
+
+.risk-value.low {
+    color: #4caf50;
+}
+
+.safe-card {
+    background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+    text-align: center;
+}
+
+.safe-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.safe-card p {
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.error {
+    background: #fee;
+    color: #c33;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #c33;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .risk-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .risk-days {
+        font-size: 2em;
+    }
+}
+
